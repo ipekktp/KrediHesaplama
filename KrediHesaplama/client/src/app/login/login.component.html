@@ -1,0 +1,36 @@
+<div class="login-container">
+
+  <div class="login-card">
+    <h2 class="card-title text-center">Giriş Yap</h2>
+
+    <form (ngSubmit)="login()" class="form">
+      <div class="form-group">
+        <label class="form-label">TCKN</label>
+        <input
+          [(ngModel)]="tckn"
+          name="tckn"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Şifre</label>
+        <input
+          [(ngModel)]="sifre"
+          type="password"
+          name="sifre"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn-primary w-full">Giriş Yap</button>
+    </form>
+
+    <div class="text-center mt-4">
+      <span class="text-secondary">Hesabınız yok mu?</span>
+      <a routerLink="/kayit" class="btn-secondary-link">Kayıt Ol</a>
+    </div>
+  </div>
+</div>

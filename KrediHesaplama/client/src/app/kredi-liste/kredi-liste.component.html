@@ -1,0 +1,23 @@
+<div class="section">
+  <h2>Kredi Başvurularım</h2>
+  <table class="kredi-table" style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th>Tür</th>
+        <th>Tutar</th>
+        <th>Vade</th>
+        <th>Tarih</th>
+        <th>İşlem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let kredi of krediler">
+        <td>{{ kredi.krediTuru }}</td>
+        <td>{{ kredi.tutar | currency:'TRY' }}</td>
+        <td>{{ kredi.vade }} Ay</td>
+        <td>{{ kredi.basvuruTarihi | date:'shortDate' }}</td>
+        <td><button (click)="iptalEt(kredi.id)">İptal</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

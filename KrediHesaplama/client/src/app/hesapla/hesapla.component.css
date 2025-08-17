@@ -1,0 +1,213 @@
+/* Genel Kontrol ve Kart Stilleri */
+.container {
+  max-width: 800px;
+  margin: 7rem auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+  border-radius: 16px;
+  border: none;
+}
+
+/* Kredi Türü Seçim Alanı */
+.kredi-turu-secim {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: nowrap;
+}
+
+.kredi-kart {
+  width: 140px;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: 2px solid #dcdde1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.kredi-kart:hover {
+  border-color: #a29bfe;
+  box-shadow: 0 4px 12px rgba(162, 155, 254, 0.2);
+}
+
+.kredi-kart.selected {
+  border-color: #6c5ce7;
+  background-color: rgba(108, 92, 231, 0.05);
+  box-shadow: 0 6px 16px rgba(108, 92, 231, 0.2);
+}
+
+.kredi-kart .icon {
+  font-size: 1.5rem;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.kredi-kart.selected .icon {
+  color: #6c5ce7;
+}
+
+.card-text {
+  display: block;
+  font-weight: 600;
+  color: #5d54a4;
+  font-size: 0.85rem;
+}
+
+/* Slider'lar için sarmalayıcı sınıf */
+.slider-wrapper {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+/* Slider Stilleri */
+input[type="range"].custom-slider {
+  width: 100%;
+  height: 8px;
+  background: transparent;
+  margin-top: 10px;
+}
+
+input[type="range"].custom-slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background: #dcdde1;
+  border-radius: 4px;
+}
+
+input[type="range"].custom-slider::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  background: #dcdde1;
+  border-radius: 4px;
+}
+
+input[type="range"].custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #6c5ce7;
+  cursor: pointer;
+  margin-top: -6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+input[type="range"].custom-slider::-webkit-slider-thumb:hover {
+  background: #584cd1;
+}
+
+input[type="range"].custom-slider::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #6c5ce7;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+/* Butonun yeni genişlik ve mesafe sınıfı */
+.btn-container {
+  max-width: 66.66%;
+  margin: 2rem auto 0; /* Üst kenar boşluğu 2rem olarak ayarlandı */
+}
+
+/* Buton ve Tablo Stilleri */
+.btn-primary {
+  background-color: #6c5ce7;
+  border-color: #6c5ce7;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #584cd1;
+  border-color: #584cd1;
+  box-shadow: 0 6px 15px rgba(108, 92, 231, 0.4);
+  transform: translateY(-2px);
+}
+
+.table-responsive {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 0;
+  color: #3d3b4f;
+}
+
+.table thead th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #5d54a4;
+  text-align: center;
+}
+
+.table tbody td {
+  text-align: center;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.btn-outline-secondary {
+  border-color: #a29bfe;
+  color: #6c5ce7;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #a29bfe;
+  color: #fff;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+}
+
+.summary-card {
+  background: rgba(162, 155, 254, 0.1);
+  border: 1px solid rgba(108, 92, 231, 0.3);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+  .btn-width-two-thirds, .slider-wrapper {
+    max-width: 100%;
+  }
+}

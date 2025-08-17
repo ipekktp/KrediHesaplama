@@ -1,0 +1,54 @@
+<div class="kayit-ol-wrapper">
+  <div class="container">
+    <h2>Kayıt Ol</h2>
+
+    <form (ngSubmit)="onRegister()">
+      <div class="form-group">
+        <label>Ad</label>
+        <input
+          [(ngModel)]="ad"
+          name="ad"
+          type="text"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Soyad</label>
+        <input
+          [(ngModel)]="soyad"
+          name="soyad"
+          type="text"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label>TCKN</label>
+        <input
+          [(ngModel)]="tckn"
+          name="tckn"
+          type="text"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Şifre</label>
+        <input
+          [(ngModel)]="sifre"
+          type="password"
+          name="sifre"
+          required
+        />
+      </div>
+
+      <button type="submit" class="primary">Kayıt Ol</button>
+    </form>
+
+    <div class="text-center mt-4">
+      <p class="text-secondary">Zaten bir hesabınız var mı?</p>
+      <a routerLink="/login" class="secondary">Giriş Yap</a>
+    </div>
+  </div>
+</div>

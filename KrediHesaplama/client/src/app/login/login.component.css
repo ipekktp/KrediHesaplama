@@ -1,0 +1,119 @@
+/* Sayfa merkezi hizalama */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: vh;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  padding: 1em;
+}
+
+/* Kart yapısı */
+.login-card {
+  width: 100%;
+  max-width: 340px; /* Daha kompakt */
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.8rem; /* Daha geniş iç boşluk */
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15); /* Daha belirgin gölge */
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Başlık */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #5d54a4; /* Mor tonu */
+  margin-bottom: 3rem;
+}
+
+/* Form elemanları */
+.form-group {
+  margin-bottom: 1.5rem; /* Boşluk artırıldı */
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  color: #7f8c8d;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 14px; /* Boyut artırıldı */
+  font-size: 0.95rem;
+  border: 1px solid #dcdde1;
+  border-radius: 12px; /* Daha yuvarlak köşeler */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #f8f9fa;
+}
+
+.form-control:focus {
+  border-color: #a29bfe; /* Mor tonu */
+  box-shadow: 0 0 0 3px rgba(162, 155, 254, 0.2);
+  outline: none;
+  background: #fff;
+}
+
+/* Butonlar */
+.btn-primary {
+  background-color: #6c5ce7; /* Mor tonu */
+  color: white;
+  border: none;
+  padding: 0.75rem; /* Boyut artırıldı */
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: #584cd1; /* Koyu mor */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(108, 92, 231, 0.3);
+}
+
+.text-secondary {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+
+.btn-secondary-link {
+    background: none;
+    border: none;
+    color: #6c5ce7; 
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-secondary-link:hover {
+    color: #584cd1; 
+    text-decoration: underline;
+}
+
+a.secondary {
+  background: transparent;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #6c5ce7;
+  color: #6c5ce7;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+

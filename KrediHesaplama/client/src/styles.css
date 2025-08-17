@@ -1,0 +1,114 @@
+/* Genel body stili */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Mor tonlarında degrade arka plan */
+  color: #3d3b4f; /* Koyu mor-gri */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: 400px; /* Daha kompakt */
+  margin: 7rem auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.container:hover {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Başlık */
+h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #6c5ce7; /* Mor tonu */
+}
+
+/* Form elemanları */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #dcdde1;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-color: #a29bfe; /* Odaklanınca açık mor */
+  box-shadow: 0 0 0 3px rgba(162, 155, 254, 0.2);
+  background: #fff;
+}
+
+/* Butonlar */
+button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+button.primary {
+  background-color: #6c5ce7; /* Mor tonu */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
+}
+
+button.primary:hover {
+  background-color: #584cd1; /* Daha koyu mor */
+  box-shadow: 0 6px 15px rgba(88, 76, 209, 0.4);
+  transform: translateY(-2px);
+}
+
+button.secondary {
+  background: transparent;
+  border: 2px solid #6c5ce7;
+  color: #6c5ce7;
+}
+
+button.secondary:hover {
+  background-color: #6c5ce7;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
+}
+
+/* Label */
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #5d54a4;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+.logo {
+  width: 100px;
+  height: auto; /* oranı korur */
+  display: block;
+  margin: 0 auto; /* ortalamak için */
+}

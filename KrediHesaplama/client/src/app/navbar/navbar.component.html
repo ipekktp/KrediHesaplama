@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <div class="logo-container">
+    <!-- Yüklediğiniz PNG logosu buraya eklendi -->
+    <a routerLink="/">
+      <img class = "logo"
+        src= "assets/logo.png"
+        alt="İK Bank Logo"
+      />
+    </a>
+  </div>
+
+  <div class="nav-links" *ngIf="isLoggedIn(); else guestLinks">
+    <a routerLink="/kredi-liste" routerLinkActive="active" class="nav-link">Kredilerim</a>
+    <a routerLink="/basvuru" routerLinkActive="active" class="nav-link">Başvuru Yap</a>
+    <a routerLink="/hesapla" routerLinkActive="active" class="nav-link">Hesapla</a>
+
+    <button (click)="logout()" class="btn-logout">Çıkış Yap</button>
+  </div>
+
+  <ng-template #guestLinks>
+    <div class="nav-links">
+      <a routerLink="/login" routerLinkActive="active" class="nav-link">Giriş Yap</a>
+      <a routerLink="/register" routerLinkActive="active" class="nav-link">Kayıt Ol</a>
+      <a routerLink="/hesapla" routerLinkActive="active" class="nav-link">Hesapla</a>
+    </div>
+  </ng-template>
+</nav>
+
+  

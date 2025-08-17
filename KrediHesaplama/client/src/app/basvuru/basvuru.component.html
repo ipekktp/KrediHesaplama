@@ -1,0 +1,68 @@
+<div class="container mt-5">
+  <div class="card p-4 shadow-sm">
+    <h2 class="card-title text-center mb-4">Kredi Başvurusu</h2>
+
+    <div *ngIf="isSuccess" class="alert-box success">
+      <p>{{ message }}</p>
+      <button class="close-btn" (click)="closeMessage()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div *ngIf="isError" class="alert-box error">
+      <p>{{ message }}</p>
+      <button class="close-btn" (click)="closeMessage()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="kredi-turu-secim">
+      <div class="kredi-kart" [class.selected]="seciliKrediTuru === 'İhtiyaç'" (click)="onKrediTuruDegisti('İhtiyaç')">
+        <i class="fas fa-shopping-bag icon"></i>
+        <span class="card-text">İhtiyaç Kredisi</span>
+      </div>
+      <div class="kredi-kart" [class.selected]="seciliKrediTuru === 'Taşıt'" (click)="onKrediTuruDegisti('Taşıt')">
+        <i class="fas fa-car icon"></i>
+        <span class="card-text">Taşıt Kredisi</span>
+      </div>
+      <div class="kredi-kart" [class.selected]="seciliKrediTuru === 'Konut'" (click)="onKrediTuruDegisti('Konut')">
+        <i class="fas fa-home icon"></i>
+        <span class="card-text">Konut Kredisi</span>
+      </div>
+    </div>
+
+    <div class="slider-wrapper">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="krediTutar" class="form-label">Kredi Tutarı (TL): {{ krediTutar | currency:'TRY':'symbol':'1.0-0' }}</label>
+          <input type="range" class="form-range custom-slider" id="krediTutar" [(ngModel)]="krediTutar" (input)="onInputChanged()" [min]="minTutar" [max]="maxTutar" step="1000">
+        </div>
+
+        <div class="col-md-6">
+          <label for="vade" class="form-label">Vade (Ay): {{ seciliVade }}</label>
+          <input type="range" class="form-range custom-slider" id="vade" [(ngModel)]="seciliVade" (input)="onInputChanged()" [min]="minVade" [max]="maxVade" step="1">
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center submit-button btn-width-two-thirds">
+      <button class="btn btn-primary btn-lg" (click)="basvuruYap()">Başvur</button>
+    </div>
+
+    <div class="summary-card" *ngIf="aylikTaksit > 0">
+      <h4>Ödeme Planı Özeti</h4>
+      <p class="h3 fw-bold text-primary">{{ aylikTaksit | number:'1.2-2' }} TL</p>
+      <small class="text-muted">Aylık Taksit</small>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0">Yıllık Faiz Oranı:</p>
+          <p class="fw-bold">%{{ (yillikFaizOrani ) | number:'1.2-2' }}</p>
+        </div>
+        <div class="col-md-6">
+          <p class="mb-0">Toplam Ödeme:</p>
+          <p class="fw-bold">{{ toplamOdenecekTutar | number:'1.2-2' }} TL</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
